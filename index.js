@@ -13,6 +13,21 @@ const fi = (function() {
       }
 
       return collection
+<<<<<<< HEAD
+    },
+
+    map: function(collection, callback) {
+      collection = Object.values(collection)
+      
+      const newArr = []
+
+      for (let i = 0; i < collection.length; i++)
+      {
+        newArr.push(callback(collection[i]))
+      }
+
+      return newArr
+=======
     },
 
     map: function(collection, callback) {
@@ -41,11 +56,49 @@ const fi = (function() {
 			}
 			
 			return acc;
+>>>>>>> b0e48221c669523018df23f029b180321995d49e
     },
     
     find: function(collection, predicate) {
       
       collection = Object.values(collection)
+
+<<<<<<< HEAD
+    reduce: function(collection, callback, acc) {
+			if (!acc) 
+			{
+				acc = collection[0]
+				collection = collection.slice(1)
+			}
+
+			for (let i = 0; i < collection.length; i++) 
+			{
+				acc = callback(acc, collection[i], collection)
+			}
+			
+			return acc;
+    },
+    
+    find: function(collection, predicate) {
+      
+      collection = Object.values(collection)
+=======
+      for (let i = 0; i < collection.length; i++
+      {
+        if (predicate(collection[i]))
+        {
+          return collection[i]
+        }
+      }
+
+      return undefined
+    },
+    
+    
+    
+    
+    
+>>>>>>> b0e48221c669523018df23f029b180321995d49e
 
       for (let i = 0; i < collection.length; i++)
       {
